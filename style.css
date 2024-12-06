@@ -1,0 +1,193 @@
+/* Preloader Style */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #15164F; /* Dark blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column; /* Stack the logo and progress bar vertically */
+}
+
+.logo-container {
+  margin-bottom: 20px; /* Space between logo and progress bar */
+}
+
+.logo {
+  width: 100px; /* Adjust size to fit your design */
+  height: auto;
+  animation: logo-spin 2s linear infinite; /* Optional animation */
+}
+
+/* Animation for spinning logo (optional) */
+@keyframes logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress-container {
+  width: 80%;
+  height: 20px;
+  background-color: #333; /* Dark background for the progress bar */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #32C9C0; /* Bright cyan progress */
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Optional: Add some text for a terminal-like effect */
+#preloader::after {
+  content: "Loading tasks... Please wait...";
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  position: absolute;
+  bottom: 20px;
+}
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #004080;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #d0dff2;
+  }
+  
+  #main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+  }
+  
+  /* Cards Area */
+  #cards-area {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #e8f1fc;
+    border-right: 2px solid #004080;
+    overflow-y: auto;
+    align-content: flex-start;
+  }
+  
+  .card {
+    width: 120px;
+    height: 160px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease;
+    background: transparent;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-back,
+  .card-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-back {
+    background: #d0dff2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-back img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .card-front {
+    background: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #004080;
+  }
+  
+  /* Clicked Cards Area */
+  #clicked-cards-area {
+    width: 30%;
+    padding: 20px;
+    background: #d0dff2;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  #clicked-cards-area h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #004080;
+    margin-bottom: 20px;
+  }
+  
+  #completed-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
