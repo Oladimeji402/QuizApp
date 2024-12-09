@@ -97,7 +97,7 @@ header p {
 
 /* Cards Area */
 #cards-area {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -170,7 +170,7 @@ header p {
 
 /* Clicked Cards Area */
 #clicked-cards-area {
-  width: 30%;
+  width: 40%;
   padding: 20px;
   background: #d0dff2;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
@@ -205,4 +205,25 @@ footer p{
   color: #004080;
   padding: 10px;
   background-color: #d0dff2;
+}
+
+@media (max-width: 768px) {
+  #cards-area {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #e8f1fc;
+    border-right: 2px solid #004080;
+    overflow-y: auto;
+    align-content: flex-start;
+  }
+  #clicked-cards-area {
+    width: 50%;
+    padding: 20px;
+    background: #d0dff2;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
 }
