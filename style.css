@@ -1,11 +1,11 @@
- /* Preloader Style */
- #preloader {
+/* Preloader Style */
+#preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #15164F; /* Dark blue background */
+  background-color: #15164f; /* Dark blue background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,11 +26,11 @@
 /* Animation for spinning logo (optional) */
 @keyframes logo-spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -46,7 +46,7 @@
 .progress-bar {
   height: 100%;
   width: 0%;
-  background-color: #32C9C0; /* Bright cyan progress */
+  background-color: #32c9c0; /* Bright cyan progress */
   border-radius: 10px 0 0 10px;
   transition: width 0.5s ease-in-out;
 }
@@ -55,7 +55,7 @@
 #preloader::after {
   content: "Loading tasks... Please wait...";
   color: #fff;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 18px;
   position: absolute;
   bottom: 20px;
@@ -63,7 +63,7 @@
 
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -186,7 +186,10 @@ header p {
 
 #completed-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grid layout for completed cards */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Grid layout for completed cards */
   gap: 15px;
   justify-items: center; /* Center the cards in each grid cell */
   padding: 20px;
@@ -194,4 +197,12 @@ header p {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   margin-top: 20px;
+}
+/* FOOTER */
+footer p{
+  text-align: center;
+  margin: 20px 0;
+  color: #004080;
+  padding: 10px;
+  background-color: #d0dff2;
 }
